@@ -43,7 +43,7 @@ RUN ln -svf /usr/bin/python3 /usr/bin/python
 RUN python -m pip install --upgrade --force pip
 
 # # Install dependencies
-RUN pip install cython pillow matplotlib GitPython termcolor tensorboard
+RUN pip install cython pillow matplotlib GitPython termcolor tensorboard packaging
 RUN pip install git+https://github.com/haotian-liu/cocoapi.git#"egg=pycocotools&subdirectory=PythonAPI"
 
 # torch2trt
