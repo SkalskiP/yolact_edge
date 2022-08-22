@@ -250,3 +250,5 @@ If you use this code base in your work, please consider citing:
 
 ## Contact
 For questions about our paper or code, please contact [Haotian Liu](mailto:lhtliu@ucdavis.edu) or [Rafael A. Rivera-Soto](mailto:riverasoto@ucdavis.edu).
+
+docker build --build-arg L4T_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.6-py3 --build-arg JETSON_PLATFORM=t194 --build-arg USER_ID=$UID -t yolact_edge_image -f Dockerfile.xavier .
