@@ -48,7 +48,7 @@ RUN pip install git+https://github.com/haotian-liu/cocoapi.git#"egg=pycocotools&
 
 # torch2trt
 WORKDIR /root
-RUN git clone https://github.com/NVIDIA-AI-IOT/torch2trt &&\
+RUN git clone --depth 1 --branch v0.0.0 https://github.com/NVIDIA-AI-IOT/torch2trt &&\
     cd torch2trt &&\
     python setup.py install --plugins
 
