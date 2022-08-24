@@ -654,6 +654,10 @@ def evalvideo(net:Yolact, path:str):
     
     if is_webcam:
         vid = cv2.VideoCapture(int(path))
+        vid.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+        vid.set(cv2.CAP_PROP_FPS, 30)
     else:
         vid = cv2.VideoCapture(path)
     
