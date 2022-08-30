@@ -24,12 +24,9 @@ import os
 
 import copy
 
-try:
-    from torch2trt import torch2trt
-    from torch2trt.torch2trt import TRTModule
-    use_torch2trt = True
-except:
-    use_torch2trt = False
+from torch2trt import torch2trt
+from torch2trt.torch2trt import TRTModule
+use_torch2trt = True
 
 # This is required for Pytorch 1.0.1 on Windows to initialize Cuda on some driver versions.
 # See the bug report here: https://github.com/pytorch/pytorch/issues/17108
